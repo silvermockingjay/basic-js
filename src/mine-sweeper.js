@@ -35,14 +35,18 @@ function minesweeper(matrix) {
     for (let j = 0; j < innerLength; j++) {
       count = 0;
       if (j > 0) {
-        if (i > 0 && matrix[i - 1][j - 1] === true || matrix[i][j - 1] === true || i < outerLength - 2 && matrix[i + 1][j - 1] === true) {
-          count++;
-        }
+        if (
+          i > 0 && matrix[i - 1][j - 1] === true ||
+          matrix[i][j - 1] === true ||
+          i < outerLength - 2 && matrix[i + 1][j - 1] === true
+        ) { count++; }
       }
       if (j < innerLength - 2) {
-        if (i > 0 && matrix[i - 1][j + 1] === true || matrix[i][j + 1] === true || i < outerLength - 2 && matrix[i + 1][j + 1] === true) {
-          count++;
-        }
+        if (
+          i > 0 && matrix[i - 1][j + 1] === true ||
+          matrix[i][j + 1] === true ||
+          i < outerLength - 2 && matrix[i + 1][j + 1] === true
+        ) { count++; }
       }
       if (i > 0 && matrix[i - 1][j] === true) {
         count++;
