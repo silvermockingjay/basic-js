@@ -21,12 +21,12 @@ class DepthCalculator {
         array = true;
       }
     }
+
     if (!array) {
       return depth;
     } 
-    
-    let flatArr = arr.flat();
 
+    let flatArr = arr.flat();
     return 1 + this.calculateDepth(flatArr);
   }
 }
